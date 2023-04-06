@@ -6,6 +6,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 const Product = (props) => {
     const {img, name, seller, ratings, price} = props.product;
     const handleAddToCart = props.handleAddToCart ;
+    // console.log(props.product)
 
     return (
         <div className='product'>
@@ -17,6 +18,7 @@ const Product = (props) => {
                 <p>Rating: {ratings} start</p>
             </div>
             <button onClick={() => handleAddToCart(props.product)} className='btn-cart'>
+                
                 Add to Cart 
                 <FontAwesomeIcon icon={faShoppingCart} />
                 </button>
